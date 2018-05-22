@@ -1,0 +1,2 @@
+class Odist < ApplicationRecord
+end

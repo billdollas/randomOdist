@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Odists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Poetry</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @odists.each do |odist| %>
+      <tr>
+        <td><%= odist.poetry %></td>
+        <td><%= link_to 'Show', odist %></td>
+        <td><%= link_to 'Edit', edit_odist_path(odist) %></td>
+        <td><%= link_to 'Destroy', odist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Odist', new_odist_path %>

@@ -1,0 +1,22 @@
+<%= form_with(model: odist, local: true) do |form| %>
+  <% if odist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(odist.errors.count, "error") %> prohibited this odist from being saved:</h2>
+
+      <ul>
+      <% odist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :poetry %>
+    <%= form.text_area :poetry %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
